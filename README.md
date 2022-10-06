@@ -5,14 +5,14 @@
 </div>
 
 ---
+
 inspired by [react-use](https://github.com/streamich/react-use).
 
 ## Features
 
 - useLocalStorage
-
+- useEvent
 
 ## TODO
 
 - [ ] useMouse
-- [ ] useEvent
