@@ -14,7 +14,7 @@ export function useLocalStorage<T>(
   key: string,
   initialValue?: T,
   options: OptionInterface = {
-    raw: true,
+    raw: false,
   }
 ): [Accessor<T>, (v: Parameters<Setter<T>>[0]) => void, () => void] {
   const initialize = (key: string) => {
