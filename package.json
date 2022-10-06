@@ -1,8 +1,22 @@
 {
   "name": "solid-hooks",
-  "private": true,
-  "version": "0.0.0",
+  "private": false,
+  "version": "0.0.1",
   "type": "module",
+  "module": "dist/index.js",
+  "main": "dist/index.umd.cjs",
+  "types": "dist/types",
+  "license": "MIT",
+  "author": "@vivipure",
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vivipure/solid-hooks"
+  },
+  "bugs": {
+    "url": "https://github.com/vivipure/solid-hooks/issues"
+  },
+
   "scripts": {
     "build": "tsc && vite build",
     "preview": "vite preview",
@@ -11,6 +25,7 @@
   },
   "devDependencies": {
     "@babel/core": "7.0.0",
+    "@rollup/plugin-typescript": "^8.5.0",
     "@testing-library/jest-dom": "^5.16.5",
     "babel-preset-solid": "^1.5.7",
     "jsdom": "^20.0.1",
@@ -20,5 +35,9 @@
     "vite": "^3.1.0",
     "vite-plugin-solid": "^2.3.9",
     "vitest": "^0.23.4"
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "solid-js": "^1.5.7"
   }
 }
