@@ -1,21 +1,39 @@
 import { createSignal } from "solid-js";
 import type { Accessor, Setter } from "solid-js/types/reactive/signal";
 
+interface OptionInterface {
+  /**
+   * get raw value,not deserialize
+   * 
+   * default: false
+   * */
+  raw: boolean;
+}
+
 export function useLocalStorage<T>(
   key: string,
-  initialValue?: T
-): [Accessor<T>, (v: Parameters<Setter<T>>[0]) => void] {
-  const item = localStorage.getItem(key);
-  let value: any = initialValue;
-  if (item) {
-    try {
-      value = JSON.parse(item);
-    } catch {
-      value = item;
-    }
+  initialValue?: T,
+  options: OptionInterface = {
+    raw: true,
   }
+): [Accessor<T>, (v: Parameters<Setter<T>>[0]) => void, () => void] {
+  const initialize = (key: string) => {
+    const localStorageValue = localStorage.getItem(key);
+    if (localStorageValue) {
+      const rawCondition = initialValue && typeof initialValue === "string";
+      if (rawCondition || options.raw) {
+        return localStorageValue;
+      }
+      try {
+        return JSON.parse(localStorageValue);
+      } catch {
+        return localStorageValue;
+      }
+    }
+    return initialValue;
+  };
 
-  const [storedValue, setStoredValue] = createSignal<T>(value);
+  const [storedValue, setStoredValue] = createSignal<T>(initialize(key));
 
   const setValue = (value: Parameters<Setter<T>>[0]) => {
     try {
@@ -29,5 +47,13 @@ export function useLocalStorage<T>(
       console.log(error);
     }
   };
-  return [storedValue, setValue];
+
+  const remove = () => {
+    try {
+      localStorage.removeItem(key);
+      setStoredValue(null as any);
+    } catch {}
+  };
+
+  return [storedValue, setValue, remove];
 }
