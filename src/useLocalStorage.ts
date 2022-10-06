@@ -5,7 +5,7 @@ interface OptionInterface {
   /**
    * get raw value,not deserialize
    * 
-   * default: false
+   * @default false
    * */
   raw: boolean;
 }
