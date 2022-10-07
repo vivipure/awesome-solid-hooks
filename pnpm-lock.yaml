@@ -10,6 +10,7 @@ specifiers:
   jsdom: ^20.0.1
   solid-js: ^1.5.7
   solid-testing-library: ^0.3.0
+  tslib: ^2.4.0
   typescript: ^4.6.4
   vite: ^3.1.0
   vite-plugin-solid: ^2.3.9
@@ -20,13 +21,14 @@ dependencies:
 
 devDependencies:
   '@babel/core': 7.0.0
-  '@rollup/plugin-typescript': 8.5.0_typescript@4.8.4
+  '@rollup/plugin-typescript': 8.5.0_hjjpfygmunulepk75ead4kovya
   '@testing-library/jest-dom': 5.16.5
   '@types/js-cookie': 3.0.2
   babel-preset-solid: 1.5.7_@babel+core@7.0.0
   jsdom: 20.0.1
   solid-js: 1.5.7
   solid-testing-library: 0.3.0_solid-js@1.5.7
+  tslib: 2.4.0
   typescript: 4.8.4
   vite: 3.1.4
   vite-plugin-solid: 2.3.9_solid-js@1.5.7+vite@3.1.4
@@ -491,7 +493,7 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.14
     dev: true
 
-  /@rollup/plugin-typescript/8.5.0_typescript@4.8.4:
+  /@rollup/plugin-typescript/8.5.0_hjjpfygmunulepk75ead4kovya:
     resolution: {integrity: sha512-wMv1/scv0m/rXx21wD2IsBbJFba8wGF3ErJIr6IKRfRj49S85Lszbxb4DCo8iILpluTjk2GAAu9CoZt4G3ppgQ==}
     engines: {node: '>=8.0.0'}
     peerDependencies:
@@ -504,6 +506,7 @@ packages:
     dependencies:
       '@rollup/pluginutils': 3.1.0
       resolve: 1.22.1
+      tslib: 2.4.0
       typescript: 4.8.4
     dev: true
 
@@ -1838,6 +1841,10 @@ packages:
 
   /ts-toolbelt/9.6.0:
     resolution: {integrity: sha512-nsZd8ZeNUzukXPlJmTBwUAuABDe/9qtVDelJeT/qW0ow3ZS3BsQJtNkan1802aM9Uf68/Y8ljw86Hu0h5IUW3w==}
+    dev: true
+
+  /tslib/2.4.0:
+    resolution: {integrity: sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ==}
     dev: true
 
   /type-check/0.3.2:

@@ -2,6 +2,11 @@ import { defineConfig } from "vitest/config";
 import solidPlugin from "vite-plugin-solid";
 import typescript from "@rollup/plugin-typescript";
 
+import pkg from "./package.json";
+
+const peer = Object.keys(pkg.peerDependencies);
+const external = (id: string) => peer.includes(id);
+
 export default defineConfig({
   plugins: [solidPlugin()],
   test: {
@@ -24,9 +29,10 @@ export default defineConfig({
       name: "index.js",
       fileName: "index",
       formats: ["es", "umd"],
+    
     },
     rollupOptions: {
-      external: ["solidJs"],
+      external: external,
       plugins: [
         typescript({
           target: "es2015",
