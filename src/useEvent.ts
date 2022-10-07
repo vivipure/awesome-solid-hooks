@@ -1,16 +1,20 @@
-import { onCleanup } from "solid-js";
-import type { EventType } from "solid-testing-library";
+import {  onCleanup } from "solid-js";
 
 export function useEvent(
   target: Element | Node | Window | Document,
-  eventName: EventType,
-  handler: (e?: Event) => boolean | void
+  eventName: string,
+  handler: (e?: any) => boolean | void,
+  options?: AddEventListenerOptions
 ) {
   if (!target || !handler) return;
 
-  target.addEventListener(eventName, handler);
-
+  target.addEventListener(eventName, handler, options);
+  const removeHandle = () => {
+    target.removeEventListener(eventName, handler, options);
+  };
   onCleanup(() => {
-    target.removeEventListener(eventName, handler);
+    removeHandle();
   });
+
+  return removeHandle
 }
