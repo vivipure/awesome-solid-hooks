@@ -1,7 +1,7 @@
 {
   "name": "awesome-solid-hooks",
   "private": false,
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "module",
   "module": "dist/index.js",
   "main": "dist/index.umd.cjs",
@@ -16,7 +16,6 @@
   "bugs": {
     "url": "https://github.com/vivipure/solid-hooks/issues"
   },
-
   "scripts": {
     "build": "tsc && vite build",
     "preview": "vite preview",
