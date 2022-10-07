@@ -33,6 +33,8 @@ function App() {
 
 - useLocalStorage
 - useEvent
+- useShare
+- useCookie
 
 ## TODO
 

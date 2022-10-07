@@ -14,7 +14,10 @@
     "url": "https://github.com/vivipure/solid-hooks"
   },
   "keywords": [
-    "solid-js", "hooks", "typescript", "solid-hooks"
+    "solid-js",
+    "hooks",
+    "typescript",
+    "solid-hooks"
   ],
   "bugs": {
     "url": "https://github.com/vivipure/solid-hooks/issues"
@@ -29,6 +32,7 @@
     "@babel/core": "7.0.0",
     "@rollup/plugin-typescript": "^8.5.0",
     "@testing-library/jest-dom": "^5.16.5",
+    "@types/js-cookie": "^3.0.2",
     "babel-preset-solid": "^1.5.7",
     "jsdom": "^20.0.1",
     "solid-js": "^1.5.7",
@@ -38,7 +42,9 @@
     "vite-plugin-solid": "^2.3.9",
     "vitest": "^0.23.4"
   },
-  "dependencies": {},
+  "dependencies": {
+    "js-cookie": "^3.0.1"
+  },
   "peerDependencies": {
     "solid-js": "^1.5.7"
   }
