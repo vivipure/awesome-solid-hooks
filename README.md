@@ -35,6 +35,7 @@ function App() {
 - useEvent
 - useShare
 - useCookie
+- useMouse
 
 ## TODO
 

@@ -1,7 +1,7 @@
 import { onMount } from "solid-js";
 import { fireEvent, render } from "solid-testing-library";
 import { describe, expect, it } from "vitest";
-import { useEvent } from "../src/useEvent";
+import { useEvent } from "../src/core/useEvent";
 
 describe("useEvent", () => {
   it("event bind successful", async () => {

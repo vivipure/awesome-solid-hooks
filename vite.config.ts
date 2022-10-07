@@ -25,7 +25,7 @@ export default defineConfig({
   },
   build: {
     lib: {
-      entry: "./src/index.ts",
+      entry: "./src/core/index.ts",
       name: "index.js",
       fileName: "index",
       formats: ["es", "umd"],

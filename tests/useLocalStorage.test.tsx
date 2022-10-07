@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { useLocalStorage } from "../src/useLocalStorage";
+import { useLocalStorage } from "../src/core/useLocalStorage";
 
 import { render } from "solid-testing-library";
 
