@@ -3,4 +3,5 @@ export * from "./useEvent";
 export * from "./useShare";
 export * from "./useCookie";
 export * from "./useMouse";
-export * from "./useImperativeHandle"
+export * from "./useImperativeHandle";
+export * from "./useCounter";
